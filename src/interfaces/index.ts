@@ -13,6 +13,7 @@ info: Info;
 data: HojaData[]; // Array of hoja data (each hoja has a name and a list of menu items)
 }
 
+/*
 export interface Info {
     nombre:      string;
     vigencia:    string;
@@ -24,6 +25,23 @@ export interface Info {
     telefonos:   string[];
     redes:       string[];
     page:        Headings[];
+}
+*/
+export interface Info {
+    nombre_archivo:string,
+    bar:Bar
+}
+
+export interface Bar{
+    nombre:      string;
+    vigencia:    string;
+    direccion:   string;
+    telefono:    string;
+    horario:     string;
+    happy:       string;
+    direcciones: string[];
+    telefonos:   string[];
+    redes:       string[];
 }
 
 export interface Headings {

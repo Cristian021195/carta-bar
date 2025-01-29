@@ -11,3 +11,4 @@ export * from "./IconGraduate";
 export * from "./IconDesign";
 export * from "./IconWebsite";
 export * from "./IconCart";
+export * from "./IconPrint";

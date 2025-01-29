@@ -1,4 +1,4 @@
-const URL = "https://script.googleusercontent.com/macros/echo?user_content_key=R7PbLcg4yzjFQQf06NijMNqChC_lEmg0Y2DJifQIfZ73xzUaSUbkX_G0HzxUrBTdZ_gekL-dS09581Oqm9VHR4YhXfQsVQrzm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHBkZ1rJFrRPP9TLChpXEzl-kA93Maf3G5lb9wLYsPhcRboj9rFV3BJYuzZ_v9mL5ZGheVvkmmHSFLJvGn_h1RL7YtCg2Q99J9z9Jw9Md8uu&lib=MsqL6RZUfES4C4NMpj88n9BnUD_6pncia";
+const URL = process.env.URL_GOOGLE_SHETS+"";
 
 import { ApiResponse } from '@/interfaces';
 import { notFound } from 'next/navigation';

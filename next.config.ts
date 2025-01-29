@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         destination: '/menu/info',
         permanent: true, // Use true for 301 redirect, false for 302 redirect
       },
+      {
+        source: '/',
+        destination: '/menu/info',
+        permanent: true, // Use true for 301 redirect, false for 302 redirect
+      },
     ];
   },
 };

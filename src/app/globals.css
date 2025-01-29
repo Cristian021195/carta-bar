@@ -14,4 +14,43 @@ body {
     margin: 0;
     padding: 1cm; /* Add padding to the page as needed */
   }
+  .article {
+    page-break-after: always; /* Ensures each article starts on a new page */
+    margin-top: 3rem;
+  }
+  .article:last-child {
+    page-break-after: auto; /* Avoids unnecessary blank page at the end */
+    margin-top: 3rem;
+  }
+}
+
+.breath{
+  /*animation: breath 300 infinite 0 infinite;*/
+  transform-origin: center center;
+  animation-name: breathAnimate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes breathAnimate {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  to {
+    transform: scale(0.8);
+    transform-origin: center center;
+  }
+}
+.btn{
+  @apply text-gray-300 px-2 py-1 rounded font-bold uppercase print:!hidden flex items-center gap-4;
+}
+.btn:active, .btn-sm:active, .btn:hover{
+  @apply scale-105;
+  filter: saturate(1.2);
+}
+.linkho{
+  @apply rounded-md hover:bg-gray-300 hover:text-orange-700 transition-colors duration-300 underline;
 }

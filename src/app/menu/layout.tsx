@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-const URL = "https://script.googleusercontent.com/macros/echo?user_content_key=R7PbLcg4yzjFQQf06NijMNqChC_lEmg0Y2DJifQIfZ73xzUaSUbkX_G0HzxUrBTdZ_gekL-dS09581Oqm9VHR4YhXfQsVQrzm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnHBkZ1rJFrRPP9TLChpXEzl-kA93Maf3G5lb9wLYsPhcRboj9rFV3BJYuzZ_v9mL5ZGheVvkmmHSFLJvGn_h1RL7YtCg2Q99J9z9Jw9Md8uu&lib=MsqL6RZUfES4C4NMpj88n9BnUD_6pncia";
+const URL = process.env.URL_GOOGLE_SHETS+"";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,14 +25,14 @@ export default async function Layout({
           ))}
         </ul>
       </div>
-      <main className="sm:w-1/2 mx-auto sm:my-20 my-4 px-4">
+      <main className="mx-auto sm:my-20 my-4 px-4">
         <nav className="bg-[#DA5C26] p-4 font-bold text-gray-300 sm:flex justify-evenly my-10 [&>a]:uppercase print:hidden hidden">
             <Link href="./info">INFORMACIÓN</Link>
             {data.data.map((item: { hoja: string }) => (
               <Link key={item.hoja} href={`./${item.hoja}`}>{item.hoja}</Link>
             ))}
         </nav>        
-      {children}
+        {children}
       </main>
     </div>
   );
