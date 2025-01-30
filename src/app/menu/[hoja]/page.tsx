@@ -36,7 +36,7 @@ export default async function MenuItemPage({ params }: Props) {
   }
 
   return (
-    <article>
+    <article className='md:w-1/2 md:mx-auto'>
       <div className='sm:mt-20 mt-4'>
         <h1 className='text-3xl md:text-5xl uppercase otxt text-gray-300'>{hojaData.hoja}</h1>
       </div>

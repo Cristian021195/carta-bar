@@ -34,7 +34,7 @@ export default async function Page(){
     const _redes = mapSocialMediaUrls(redes, data.info.bar.redes);
 
     return (
-        <article className='text-gray-300'>
+        <article className='text-gray-300 md:w-1/2 md:mx-auto'>
             <div className='sm:mt-20 mt-4'>
                 <h1 className='text-3xl md:text-5xl otxt text-gray-300'>INFORMACIÓN</h1>
             </div>

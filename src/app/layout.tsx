@@ -23,6 +23,7 @@ export default async function RootLayout({
     <html lang="en">
       <Head>
         <link rel="icon" href="/lambda.svg" type="image/svg+xml" />
+        <meta name="viewport" content="width=device-width,initial-scale=1"></meta>
       </Head>
       <body
         className={`${albert.className} antialiased print:w-full bg-neutral-900 `}
