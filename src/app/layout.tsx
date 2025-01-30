@@ -28,7 +28,7 @@ export default async function RootLayout({
         className={`${albert.className} antialiased print:w-full bg-neutral-900 `}
       >
       <Header/>
-      <div className="sm:w-1/2 mx-auto sm:my-20 my-4 px-4">
+      <div className="mx-auto sm:my-20 my-4 px-4">
         {children}
       </div>
       <Footer/>

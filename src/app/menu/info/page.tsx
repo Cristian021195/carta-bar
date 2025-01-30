@@ -5,7 +5,9 @@ import { ApiResponse, HojaData } from '@/interfaces';
 
 export async function generateStaticParams() {
   // Fetch all "hoja" values to pre-generate static paths (optional, if you're using static generation)
-  const res = await fetch(URL);
+  const res = await fetch(URL, {
+    next: { revalidate:  300}
+  });
   const data: ApiResponse = await res.json();
   
   return data.data.map((item:HojaData) => ({
@@ -23,7 +25,9 @@ export default async function Page(){
         {name:'whatsapp',color:'bg-green-500'},
         {name:'threads',color:'bg-slate-600'}
     ];
-    const res = await fetch(URL);
+    const res = await fetch(URL, {
+        next: { revalidate:  300}
+    });
     const data:ApiResponse = await res.json();
     const _telefonos = data.info.bar.telefonos.join(', ');
     const _direcciones = data.info.bar.direcciones.join(', ');
@@ -32,10 +36,10 @@ export default async function Page(){
     return (
         <article className='text-gray-300'>
             <div className='sm:mt-20 mt-4'>
-                <h1 className='text-5xl otxt text-gray-300'>INFORMACIÓN</h1>
+                <h1 className='text-3xl md:text-5xl otxt text-gray-300'>INFORMACIÓN</h1>
             </div>
             <br />
-            <div className='flex justify-between mb-4'>
+            <div className='flex sm:block justify-between mb-4 sm:space-y-4'>
                 <p><b className='text-[#DA5C26]'>NOMBRE / RAZÓN SOCIAL</b> {data.info.bar.nombre}</p>
                 <p><b className='text-[#DA5C26]'>ÚLTIMA ACTUALIZACIÓN DE LA CARTA</b> {data.info.bar.vigencia}</p>
             </div>
@@ -59,5 +63,3 @@ export default async function Page(){
         </article>
     )
 }
-
-export const revalidate = 240;

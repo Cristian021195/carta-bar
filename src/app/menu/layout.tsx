@@ -17,7 +17,7 @@ export default async function Layout({
   const data = await res.json();
   return (
     <div>
-      <div className="bg-black px-2 py-4 fixed bottom-0 sm:hidden w-full uppercase text-white font-bold overflow-x-scroll">
+      <div className="right-0 bg-black px-2 py-4 fixed bottom-0 sm:hidden w-full uppercase text-white font-bold overflow-x-scroll">
         <ul className="flex text-nowrap gap-4">
           <Link href="./info">INFORMACIÓN</Link>
           {data.data.map((item: { hoja: string }) => (

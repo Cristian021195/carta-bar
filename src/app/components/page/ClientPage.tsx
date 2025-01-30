@@ -36,7 +36,7 @@ export function ClientPage({data}: IClientPage){
     };
 
     return (
-        <div ref={divRef}>
+        <div ref={divRef} className="flex justify-between flex-wrap [&>div]:sm:my-4 [&>div]:my-2 md:w-1/2 md:mx-auto text-gray-300 overflow-x-scroll">
             <div className="text-center print:!hidden">
                 <button className="btn bg-slate-600" onClick={handlePrintAll}>
                     <IconPrint/> IMPRIMIR TODA LA CARTA
@@ -63,34 +63,34 @@ export function ClientPage({data}: IClientPage){
                             <div className='print:text-sm flex justify-between flex-wrap [&>div]:sm:my-4 [&>div]:my-2 text-gray-300 print:!text-gray-800'>
                                 {
                                 h.data?.map((cu,cui)=>{
-                                    if(cui > 1){
-                                    return (
-                                        <div key={cui+'f'} className='[&>div]:hover:bg-neutral-700 mx-auto print:!my-0.5'>
-                                            <div className='flex justify-between w-full gap-16 print:gap-4'>
-                                                {
-                                                cu.map((co, coi)=>{
-                                                    const nro = typeof co === 'number' && !isNaN(co);
-                                                    if(coi > 1){
-                                                        return (
-                                                            <div key={cui+'-'+coi} className='text-nowrap'>
-                                                            <b className='uppercase text-[#DA5C26]'>{cabecera[coi]}</b> &nbsp; {nro ? "$"+co : co}
-                                                            </div>
-                                                        )
-                                                    }else if(coi == 0){
-                                                        return (
-                                                            <div key={cui+'-'+coi}>
-                                                            <div className='w-96'>
-                                                                <b className='uppercase text-[#DA5C26]'>{cu[0]}</b>
-                                                                <p>{cu[1]}</p>
-                                                            </div>
-                                                            </div>
-                                                        )
+                                    if(cui >= 1){
+                                        return (
+                                            <div key={cui+'f'} className='[&>div]:hover:bg-neutral-700 mx-auto print:!my-0.5'>
+                                                <div className='flex justify-between w-full gap-16 print:gap-4'>
+                                                    {
+                                                    cu.map((co, coi)=>{
+                                                        const nro = typeof co === 'number' && !isNaN(co);
+                                                        if(coi > 1){
+                                                            return (
+                                                                <div key={cui+'-'+coi} className='text-nowrap'>
+                                                                <b className='uppercase text-[#DA5C26]'>{cabecera[coi]}</b> &nbsp; {nro ? "$"+co : co}
+                                                                </div>
+                                                            )
+                                                        }else if(coi == 0){
+                                                            return (
+                                                                <div key={cui+'-'+coi}>
+                                                                <div className='w-96'>
+                                                                    <b className='uppercase text-[#DA5C26]'>{cu[0]}</b>
+                                                                    <p>{cu[1]}</p>
+                                                                </div>
+                                                                </div>
+                                                            )
+                                                        }
+                                                    })
                                                     }
-                                                })
-                                                }
+                                                </div>
                                             </div>
-                                        </div>
-                                    )
+                                        )
                                     }
                                 })
                                 }
