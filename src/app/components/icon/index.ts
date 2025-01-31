@@ -12,3 +12,4 @@ export * from "./IconDesign";
 export * from "./IconWebsite";
 export * from "./IconCart";
 export * from "./IconPrint";
+export * from "./IconHamburger";

@@ -36,12 +36,12 @@ export default async function MenuItemPage({ params }: Props) {
   }
 
   return (
-    <article className='md:w-1/2 md:mx-auto'>
+    <article className='md:mx-auto'>
       <div className='sm:mt-20 mt-4'>
         <h1 className='text-3xl md:text-5xl uppercase otxt text-gray-300'>{hojaData.hoja}</h1>
       </div>
       <br />
-      <div className='flex justify-between flex-wrap [&>div]:sm:my-4 [&>div]:my-2 text-gray-300 overflow-x-scroll'>
+      <div className='[&>div]:sm:my-4 [&>div]:my-2 text-gray-300 overflow-x-scroll md:px-20 xl:overflow-x-hidden'>
         {
           cuerpo?.map((cu,cui)=>{
             if(cui >= 1){

@@ -8,7 +8,7 @@ export const Footer = () => {
           <path fill="#171717" fillOpacity="1" d="M1200 0L0 50 0 0 1200 0 1200 120z" className="shape-fill"></path>
         </svg>
       </div>
-      <footer className="w-full p-4 bg-orange-700 flex sm:justify-evenly flex-wrap gap-4 [&>div]:max-w-72 text-gray-300 sm:space-y-0 space-y-10 pb-20">
+      <footer className="w-full p-4 bg-orange-700 flex sm:justify-evenly flex-wrap gap-4 [&>div]:max-w-72 text-gray-300 sm:space-y-0 space-y-10 pb-20 [&>div]:mx-auto">
           <div>
             <b>SOBRE NOSOTROS</b>
             <div className="my-4 p-4 bg-neutral-900">

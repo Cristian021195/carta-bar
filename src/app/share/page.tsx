@@ -8,7 +8,7 @@ export default async function Page() {
   const protocol = (await headersList).get("x-forwarded-proto") || "https"; // Get protocol
   const url = `${protocol}://${host}`; // Construct full URL
 
-  return <QRCodeClient url={url} />;
+  return <div className="py-20"><QRCodeClient url={url}/></div>;
 }
 
 /*

@@ -7,7 +7,7 @@ interface IProps {
 
 export default function QRCodeClient({ url }: IProps) {
   return (
-    <div className="px-10 md:px-2 w-3/4 md:w-1/4 mx-auto">
+    <div className="p-8 md:p-4 w-3/4 md:w-1/4 mx-auto bg-white">
       <QRCode
         size={180}
         style={{ height: "auto", maxWidth: "100%", width: "100%" }}
